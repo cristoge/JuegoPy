@@ -1,4 +1,4 @@
-from Dibujos import menu_db,escogerdb,adivina_numero,errordb,ganardb,es_menordb,es_mayordb
+from Dibujos import menu_db,escogerdb,adivina_numero,errordb,ganardb,es_menordb,es_mayordb,vidas5,perderdb
 import random
 def menu():
     """
@@ -41,14 +41,16 @@ def modo_1_jugador_sin_vidas():
 def modo_1_jugador_con_vidas():
     numero_secreto = random.randint(1, 100)
     vidas = 5
+    print(vidas5)
     while vidas > 0:
         try:
-            intento = int(input(f"Adivina el número (te quedan {vidas} vidas): "))
+            print(adivina_numero)
+            intento = int(input())
             if intento < 1 or intento > 100:
                 print(errordb)
                 continue
             if intento == numero_secreto:
-                print("¡Has ganado!")
+                print(ganardb)
                 return
             elif intento < numero_secreto:
                 print(es_mayordb)
@@ -57,7 +59,7 @@ def modo_1_jugador_con_vidas():
             vidas -= 1
         except ValueError:
             print(errordb)
-    print(f"Has perdido. El número secreto era {numero_secreto}.")
+    print(perderdb)
 
 
 def modo_2_jugadores_con_vidas():
