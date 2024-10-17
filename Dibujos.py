@@ -1,9 +1,16 @@
 from colorama import Fore, Style, init
+"""
+En esta carpeta estan todos los dibujos
+Se importa colorama para darle color.
+Se hace en una carpeta aparte para que 
+el codigo sea entendible, entonces 
+en esta carpeta esta todos los dibujos
+que reemplazan los prints de los textos.
+"""
 
-# Inicializa colorama
 init(autoreset=True)
 
-# Arte ASCII con colores
+# Dibujos ascii con colores
 
 menu_db = f"""
 {Fore.CYAN}
